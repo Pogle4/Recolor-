@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Recolor!",
+  "version": "1.1",
+  "description": "Recolor! é uma extensão para o navegador Chrome destinada a pessoas com daltonismo do tipo 'protanopia', que altera a paleta de cores em páginas web.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {}
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
